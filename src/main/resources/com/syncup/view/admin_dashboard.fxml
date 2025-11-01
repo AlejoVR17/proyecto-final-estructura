@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.syncup.controller.AdminDashboardController"
+            prefWidth="850" prefHeight="500">
+
+    <!-- Menú lateral -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #1F1F1F;" prefWidth="220" alignment="TOP_CENTER">
+            <Label text="⚙️Admin SyncUp" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-padding: 15 0 15 0;"/>
+            <Button text="Gestionar Canciones" fx:id="btnCanciones" prefWidth="180" onAction="#onGestionarCanciones"/>
+            <Button text="Gestionar Usuarios" fx:id="btnUsuarios" prefWidth="180" onAction="#onGestionarUsuarios"/>
+            <Button text="Cargar Archivo .txt" fx:id="btnCargar" prefWidth="180" onAction="#onCargarArchivo"/>
+            <Button text="Cerrar Sesión" fx:id="btnCerrar" prefWidth="180" onAction="#onCerrarSesion"/>
+        </VBox>
+    </left>
+
+    <!-- Área central -->
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #FFFFFF;">
+            <Label text="Bienvenido Administrador 👑"
+                   style="-fx-font-size: 22px; -fx-text-fill: #333333;"/>
+        </StackPane>
+    </center>
+
+</BorderPane>

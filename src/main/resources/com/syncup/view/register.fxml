@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.syncup.controller.RegisterController"
+            prefWidth="400" prefHeight="350">
+
+    <VBox spacing="10" alignment="CENTER"
+          style="-fx-background-color: #ffffff;"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0">
+
+        <Label text="📝 Registro de Usuario" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <TextField fx:id="txtName" promptText="Nombre completo"/>
+        <TextField fx:id="txtUsername" promptText="Nombre de usuario"/>
+        <PasswordField fx:id="txtPassword" promptText="Contraseña"/>
+
+        <Button text="Registrar" onAction="#onRegister" styleClass="btn btn-primary"/>
+        <Button text="Volver al inicio" onAction="#onBack" styleClass="btn btn-secondary"/>
+
+        <Label fx:id="lblMessage" textFill="green"/>
+
+    </VBox>
+
+</AnchorPane>

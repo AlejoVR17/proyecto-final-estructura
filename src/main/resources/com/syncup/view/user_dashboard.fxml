@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.syncup.controller.UserDashboardController"
+            prefWidth="800" prefHeight="500">
+
+    <!-- Menú lateral -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #0078D7;" prefWidth="200" alignment="TOP_CENTER">
+            <Label text="🎧 SyncUp" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-padding: 15 0 15 0;"/>
+            <Button text="Buscar Canciones" fx:id="btnBuscar" prefWidth="160" styleClass="btn btn-light" onAction="#onBuscar"/>
+            <Button text="Favoritos" fx:id="btnFavoritos" prefWidth="160" styleClass="btn btn-light" onAction="#onFavoritos"/>
+            <Button text="Descubrimiento Semanal" fx:id="btnDescubrimiento" prefWidth="160" styleClass="btn btn-light" onAction="#onDescubrimiento"/>
+            <Button text="Cerrar Sesión" fx:id="btnCerrar" prefWidth="160" styleClass="btn btn-danger" onAction="#onCerrarSesion"/>
+        </VBox>
+    </left>
+
+    <!-- Contenido central -->
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: #FFFFFF;">
+            <Label text="Bienvenido a SyncUp 🎶" style="-fx-font-size: 22px; -fx-text-fill: #444444;"/>
+        </StackPane>
+    </center>
+
+</BorderPane>
