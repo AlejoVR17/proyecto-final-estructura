@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.syncup.controller.FriendsController"
+      spacing="10" alignment="TOP_CENTER" padding="15">
+
+    <Label text="👥 Conexiones de Usuario" style="-fx-font-size: 18px;"/>
+
+    <TableView fx:id="tblUsuarios" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="colUsuario" text="Usuario" prefWidth="150"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+            <TableColumn fx:id="colEstado" text="Estado" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="➕ Seguir" onAction="#onSeguir"/>
+        <Button text="➖ Dejar de seguir" onAction="#onDejarSeguir"/>
+        <Button text="💡 Ver sugerencias" onAction="#onSugerencias"/>
+    </HBox>
+
+    <Label fx:id="lblResultado" style="-fx-font-size: 14px; -fx-padding: 10;"/>
+</VBox>

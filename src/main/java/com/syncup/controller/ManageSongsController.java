@@ -2,6 +2,7 @@ package com.syncup.controller;
 
 import com.syncup.data.CancionRepository;
 import com.syncup.model.Cancion;
+import com.syncup.utils.TrieInitializer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -34,6 +35,7 @@ public class ManageSongsController {
             if (CancionRepository.agregarCancion(c)) {
                 lblMessage.setText("✅ Cancion agregada");
                 tblSongs.getItems().add(c);
+                TrieInitializer.getTrie().insert(c.getTitulo());
             } else lblMessage.setText("❌ ID ya existe");
         } catch (Exception e) {
             lblMessage.setText("❌ Datos inválidos");

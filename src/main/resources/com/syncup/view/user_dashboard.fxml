@@ -16,6 +16,9 @@
             <Button text="Favoritos" fx:id="btnFavoritos" prefWidth="160" styleClass="btn btn-light" onAction="#onFavoritos"/>
             <Button text="Descubrimiento Semanal" fx:id="btnDescubrimiento" prefWidth="160" styleClass="btn btn-light" onAction="#onDescubrimiento"/>
             <Button text="Cerrar Sesión" fx:id="btnCerrar" prefWidth="160" styleClass="btn btn-danger" onAction="#onCerrarSesion"/>
+            <Button text="Conexiones" fx:id="btnConexiones"
+                    prefWidth="160" styleClass="btn btn-light" onAction="#onConexiones"/>
+
         </VBox>
     </left>
 
